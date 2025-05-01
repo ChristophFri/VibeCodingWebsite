@@ -1,0 +1,378 @@
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #121212;
+    color: #ffffff;
+    overflow-x: hidden;
+}
+
+header {
+    padding: 2rem;
+    text-align: center;
+    background-color: #000;
+}
+
+.main-title {
+    font-size: 4rem;
+    background: linear-gradient(to right, #ff00cc, #3333ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: pulse 2s infinite;
+}
+
+section {
+    padding: 2rem;
+    margin: 1rem 0;
+}
+
+/* Banner Section */
+.banner {
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('https://source.unsplash.com/random/1600x900/?abstract') center/cover no-repeat;
+    position: relative;
+}
+
+.banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.banner-text {
+    position: relative;
+    font-size: 5rem;
+    font-weight: bold;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+    z-index: 1;
+}
+
+/* Art Grid */
+.art-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+    padding: 1rem;
+}
+
+.art-item {
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Different Art Styles */
+.neon {
+    background-color: #000;
+    color: #fff;
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #0073e6, 0 0 20px #0073e6;
+    border: 4px solid #0073e6;
+    box-shadow: 0 0 5px #0073e6, 0 0 10px #0073e6, 0 0 15px #0073e6, 0 0 20px #0073e6;
+}
+
+.vintage {
+    background-color: #f5e8c0;
+    color: #5c3d2e;
+    font-family: 'Georgia', serif;
+    border: 2px solid #5c3d2e;
+    box-shadow: 5px 5px 0 #5c3d2e;
+}
+
+.graffiti {
+    background: url('https://source.unsplash.com/random/400x400/?graffiti') center/cover;
+    color: #fff;
+    font-family: 'Impact', sans-serif;
+    text-shadow: 2px 2px 4px #000;
+    transform: rotate(-2deg);
+}
+
+.minimalist {
+    background-color: #fff;
+    color: #000;
+    font-family: 'Helvetica', sans-serif;
+    border: 1px solid #000;
+}
+
+.pixel {
+    background-color: #4a752c;
+    color: #fff;
+    font-family: 'Courier New', monospace;
+    text-shadow: 2px 2px 0 #000;
+    border: 4px solid #000;
+    box-shadow: 0 0 0 4px #4a752c, 0 0 0 8px #000;
+}
+
+.script {
+    background: linear-gradient(135deg, #fdcbf1 0%, #e6dee9 100%);
+    color: #674ea7;
+    font-family: 'Brush Script MT', cursive;
+    border-radius: 50%;
+}
+
+.block {
+    background-color: #ff5f40;
+    color: #001f3f;
+    font-family: 'Arial Black', sans-serif;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.gradient {
+    background: linear-gradient(45deg, #f3ec78, #af4261);
+    color: white;
+    font-weight: 900;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.shadow {
+    background-color: #222;
+    color: #fff;
+    text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0,0,0,.1), 0 0 5px rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,.3), 0 3px 5px rgba(0,0,0,.2), 0 5px 10px rgba(0,0,0,.25);
+}
+
+.outline {
+    background-color: #000;
+    font-size: 1.5rem;
+    -webkit-text-stroke: 1px white;
+    color: transparent;
+}
+
+.threedee {
+    background-color: #222;
+    color: #eee;
+    text-shadow: 0px 1px 0px #999, 0px 2px 0px #888, 0px 3px 0px #777, 0px 4px 0px #666, 0px 5px 0px #555, 0px 6px 0px #444, 0px 7px 0px #333, 0px 8px 7px #001135;
+}
+
+.glitch {
+    background-color: #000;
+    color: #fff;
+    position: relative;
+    animation: glitch 1s infinite;
+}
+
+/* Marquee Section */
+.marquee-section {
+    overflow: hidden;
+    background-color: #000;
+    padding: 1rem 0;
+}
+
+.marquee {
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.marquee-content {
+    display: inline-block;
+    white-space: nowrap;
+    animation: marquee 20s linear infinite;
+}
+
+.marquee-content span {
+    display: inline-block;
+    font-size: 2rem;
+    padding: 0 2rem;
+    color: #ff00cc;
+}
+
+/* Rainbow Text */
+.rainbow-text {
+    text-align: center;
+    padding: 3rem;
+}
+
+.rainbow-text h2 {
+    font-size: 3rem;
+    animation: rainbow 5s infinite;
+}
+
+/* Animated Section */
+.animated-section {
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+    background-color: #121212;
+}
+
+.floating {
+    position: absolute;
+    animation: float 8s ease-in-out infinite;
+    color: #fff;
+    font-size: 1.5rem;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+}
+
+.delay-1 { animation-delay: 1s; left: 20%; }
+.delay-2 { animation-delay: 2s; left: 40%; }
+.delay-3 { animation-delay: 3s; left: 60%; }
+.delay-4 { animation-delay: 4s; left: 80%; }
+
+/* Repeating Grid */
+.repeating-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 0.5rem;
+    padding: 1rem;
+    background-color: #1e1e1e;
+}
+
+.grid-item {
+    padding: 1rem;
+    border: 1px solid #333;
+    text-align: center;
+    font-size: 0.9rem;
+    background-color: #252525;
+    transition: all 0.3s;
+}
+
+.grid-item:hover {
+    transform: scale(1.05);
+    background-color: #303030;
+    z-index: 1;
+}
+
+/* ASCII Art Section */
+.ascii-art {
+    background-color: #000;
+    padding: 2rem;
+    text-align: center;
+    overflow-x: auto;
+}
+
+.ascii-art pre {
+    font-family: monospace;
+    color: #0f0;
+    font-size: 0.6rem;
+    line-height: 1.2;
+    text-align: center;
+}
+
+/* Emoji Section */
+.emoji-section {
+    text-align: center;
+    background: linear-gradient(to bottom, #003366, #000033);
+    padding: 2rem;
+}
+
+.emoji-section div {
+    margin: 1rem 0;
+    font-size: 1.5rem;
+}
+
+/* Grid Mosaic */
+.grid-mosaic {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 0.25rem;
+    padding: 1rem;
+    background-color: #000;
+}
+
+.mosaic-item {
+    padding: 0.5rem;
+    text-align: center;
+    font-size: 0.7rem;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #222;
+    border-radius: 3px;
+}
+
+.mosaic-item:nth-child(odd) {
+    background: #333;
+}
+
+.mosaic-item:nth-child(3n) {
+    background: #444;
+}
+
+.mosaic-item:nth-child(5n) {
+    background: #111;
+}
+
+/* Footer */
+footer {
+    padding: 2rem;
+    text-align: center;
+    background-color: #000;
+    border-top: 1px solid #333;
+}
+
+.footer-text {
+    font-size: 1.2rem;
+    color: #666;
+}
+
+/* Animations */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+@keyframes marquee {
+    0% { transform: translateX(100vw); }
+    100% { transform: translateX(-100%); }
+}
+
+@keyframes rainbow {
+    0% { color: red; }
+    14% { color: orange; }
+    28% { color: yellow; }
+    42% { color: green; }
+    57% { color: blue; }
+    71% { color: indigo; }
+    85% { color: violet; }
+    100% { color: red; }
+}
+
+@keyframes float {
+    0% { transform: translateY(0) rotate(0deg); opacity: 0; }
+    10% { opacity: 1; }
+    90% { opacity: 1; }
+    100% { transform: translateY(-300px) rotate(360deg); opacity: 0; }
+}
+
+@keyframes glitch {
+    0% { transform: translate(0); }
+    20% { transform: translate(-5px, 5px); }
+    40% { transform: translate(-5px, -5px); }
+    60% { transform: translate(5px, 5px); }
+    80% { transform: translate(5px, -5px); }
+    100% { transform: translate(0); }
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .main-title, .banner-text {
+        font-size: 2.5rem;
+    }
+    
+    .art-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+    
+    .ascii-art pre {
+        font-size: 0.4rem;
+    }
+} 
